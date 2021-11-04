@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    background-color: #BF8855;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pingpong {
+    display: flex;
+}
+
+.pingpong__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 -1px 20px 3px rgba(0, 0, 0, .4);
+    position: relative;
+}
+
+.pingpong__main::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    border-left: 6px dotted #6B6B6B;
+}
+
+.pingpong__score {
+    padding: 20px 40px;
+    font-size: 40px;
+    color: #fff;
+}
+
+.pingpong__ball {
+    z-index: 2;
+    background-color: #C1C1C1;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #DADADA, 0 0 0 6px #5C5C5C;
+    position: absolute;
+}
+
+.pingpong__ball::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #DADADA;
+    position: absolute;
+    right: 7px;
+    top: 7px;
+}
+
+.pingpong__player {
+    z-index: 1;
+    position: absolute;
+    width: 30px;
+    height: 120px;
+    background-color: #C15402;
+    border: 5px solid #8E3500;
+    border-radius: 5px;
+    transition: transform .1s;
+}
+
+.first-player {
+    left: 10px;
+    background-color: #006BB2;
+    border-color: #004F89;
+}
+
+.second-player {
+    right: 10px;
+}
